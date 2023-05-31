@@ -8,14 +8,31 @@
 </head>
 <body>
     <script>
-        var age = 16;
+        var age = 14;
         var isOldEnough = age >= 18;
+        var fruits = ["apple", "orange", "kiwi", "grape", "pear"];
+        var fruit = fruits[2]
 
-        if (isOldEnough) {
-            console.log("You are old enough");
+        if (!fruit) {
+            console.log("no fruit found at that index");
         } else {
-            console.log("Get Outta Here Pal");
+            console.log(fruit);
         }
+
+        // if (isOldEnough) {
+        //     console.log("You are old enough");
+        // } else if (age < 18 && age > 15) {
+        //     console.log("Get your drivers licence");
+        // }
+        // else if (age < 15 && age > 8 || (age === 14)) {
+        //     console.log("Eat Snacks");
+        // }
+        // else {
+        //     console.log("No conditions matched...");
+        // }
     </script>
 </body>
 </html>
+
+
+<!-- In conditional chaining (line 19), wrapping one of the conditions in parenthesis (age === 14), that condition will be read first no matter where it is in the chain order -->
