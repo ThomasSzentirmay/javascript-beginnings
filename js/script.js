@@ -1,18 +1,19 @@
-var students = ["John", "FSF", "Jamil", "FSF", "Roman", "FSF"]
+var students = ["John", "FSF", "HTML", "Jamil", "FSF", "CSS", "Roman", "FSF", "JavaScript"]
 
 
 
 
-for (var index = 0; index < students.length; index += 2) {
-    printStudentInfo(students[index], students[index + 1])
+for (var index = 0; index < students.length; index += 3) {
+    printStudentInfo(students[index], students[index + 1], students[index + 2])
 }
 
 
 
-function printStudentInfo(studentName, studentCourse) {
+function printStudentInfo(studentName, studentCourse, studentsFavLanguage) {
     // console.log("Welcome to the class!");
     console.log("Name:", studentName);
     console.log("Course:", studentCourse);
+    console.log("Favourite Language:", studentsFavLanguage);
     // console.log("Please utilize office hours for help!");
 }
 
