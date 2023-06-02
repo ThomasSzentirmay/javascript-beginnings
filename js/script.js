@@ -25,17 +25,22 @@ function password (choices) {
     var combinedChars = [];
     var pass = "";
 
+    var includeLowercase = choices[1]
+    var includeUppercase = choices[2]
+    var includeNumbers = choices[3]
+    var includeSpecials = choices[4]
+
     if (includeLowercase) {
-        combinedChars = combinedChars.concat(choices[1])
+        combinedChars = combinedChars.concat(lowercase)
     }
     if (includeUppercase) {
-        combinedChars = combinedChars.concat(choices[2])
+        combinedChars = combinedChars.concat(uppercase)
     }
     if (includeNumbers) {
-        combinedChars = combinedChars.concat(choices[3])
+        combinedChars = combinedChars.concat(numbers)
     }
     if (includeSpecials) {
-        combinedChars = combinedChars.concat(choices[4])
+        combinedChars = combinedChars.concat(specialCharacters)
     }
 
     for (var count = 0; count < charSet.length; count++) {
@@ -44,10 +49,10 @@ function password (choices) {
         password += combinedChars[randomIndex];
     }
 
-    return(password);
+    return password;
 }
 
-var genPassword = password;
+var genPassword = (choices);
 
 console.log(genPassword);
 
