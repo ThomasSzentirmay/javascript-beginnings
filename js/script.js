@@ -43,7 +43,7 @@ function password (choices) {
         combinedChars = combinedChars.concat(specialCharacters)
     }
 
-    for (var count = 0; count < charSet.length; count++) {
+    for (var count = 0; count < combinedChars.length; count++) {
         var randomIndex = Math.floor(Math.random() * combinedChars.length);
        
         password += combinedChars[randomIndex];
@@ -52,9 +52,9 @@ function password (choices) {
     return password;
 }
 
-var genPassword = (combinedChars);
+var pass = password(choices);
 
-console.log(genPassword);
+console.log(pass);
 
 
 
