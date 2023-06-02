@@ -8,10 +8,10 @@ var combined = [];
 
 function userInput () {
     var amount = parseInt(prompt("How many characters would you like?"));
-    var includeLowercase = prompt("Click OK to include lowercase letters")
-    var includeUppercase = prompt("Click OK to include uppercase letters")
-    var includeNumbers = prompt("Click OK to include numbers")
-    var includeSpecials = prompt("Click OK to include special characters")
+    var includeLowercase = confirm("Click OK to include lowercase letters")
+    var includeUppercase = confirm("Click OK to include uppercase letters")
+    var includeNumbers = confirm("Click OK to include numbers")
+    var includeSpecials = confirm("Click OK to include special characters")
 
     return[amount, includeLowercase, includeUppercase, includeNumbers, includeSpecials];
 }
@@ -52,7 +52,7 @@ function password (choices) {
     return password;
 }
 
-var genPassword = (choices);
+var genPassword = (combinedChars);
 
 console.log(genPassword);
 
