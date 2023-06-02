@@ -58,8 +58,13 @@ function generatePass () {
     // Create a for loop with the new array, that loops for the length of the amount user input, and that will generate a random character from the user chosen char sets each time into our empty string
 
     for (var count = 0; count < charAmount; count++) {
+        var randomNum = Math.random();
+        var randomIndex= Math.floor(randomNum * charAmount.length);
 
+        pass += randomIndex;
     }
+
+    return pass;
 }
 
 // Call the function
@@ -67,3 +72,7 @@ function generatePass () {
 var pass = generatePass();
 
 // console.log(pass);
+
+var outputParagraph = document.querySelector('.password-output');
+
+outputParagraph.innerText = pass;
