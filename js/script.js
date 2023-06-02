@@ -59,9 +59,9 @@ function generatePass () {
 
     for (var count = 0; count < charAmount; count++) {
         var randomNum = Math.random();
-        var randomIndex= Math.floor(randomNum * charAmount.length);
+        var randomIndex= Math.floor(randomNum * allPossibleChars.length);
 
-        pass += charAmount[randomIndex];
+        pass += allPossibleChars[randomIndex];
     }
 
     return pass;
