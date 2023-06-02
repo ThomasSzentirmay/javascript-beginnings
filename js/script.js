@@ -61,7 +61,7 @@ function generatePass () {
         var randomNum = Math.random();
         var randomIndex= Math.floor(randomNum * charAmount.length);
 
-        pass += randomIndex;
+        pass += charAmount[randomIndex];
     }
 
     return pass;
@@ -71,8 +71,8 @@ function generatePass () {
 
 var pass = generatePass();
 
-// console.log(pass);
+console.log(pass);
 
-var outputParagraph = document.querySelector('.password-output');
+// var outputParagraph = document.querySelector('.password-output');
 
-outputParagraph.innerText = pass;
+// outputParagraph.innerText = pass;
