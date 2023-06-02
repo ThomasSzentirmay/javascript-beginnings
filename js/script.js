@@ -20,6 +20,8 @@ function userInput () {
 
 var choices = userInput();
 
+// create another function that takes the users inputs from the previous function, and outputs those options randomly based on the chars available in a string
+
 function generatePass (choices) {
 
     var combinedChars = [];
@@ -64,4 +66,6 @@ console.log(pass);
 
 // We will be using: Functions, conditionals, for loops, .concat(), return statement
 
-// console.log(choices);
+
+
+
