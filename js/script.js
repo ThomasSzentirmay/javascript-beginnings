@@ -21,9 +21,9 @@ var choices = userInput()
 // Using our choices array, create a function that creates an array of the combined character sets based on the user’s choices (hint - conditionals) and generates a resulting random string of characters in the amount chosen by the user
 // The function will return that generated string
 
-function password (choices) {
+function generatePass (choices) {
     var combinedChars = [];
-    var pass = "";
+    var password = "";
 
     var includeLowercase = choices[1]
     var includeUppercase = choices[2]
@@ -43,7 +43,7 @@ function password (choices) {
         combinedChars = combinedChars.concat(specialCharacters)
     }
 
-    for (var count = 0; count < combinedChars.length; count++) {
+    for (var count = 0; count < choices[0]; count++) {
         var randomIndex = Math.floor(Math.random() * combinedChars.length);
        
         password += combinedChars[randomIndex];
@@ -52,9 +52,6 @@ function password (choices) {
     return password;
 }
 
-var pass = password(choices);
+var pass = generatePass(choices);
 
 console.log(pass);
-
-
-
