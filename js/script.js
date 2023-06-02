@@ -13,19 +13,35 @@ function userInput () {
     var includeNumbers = prompt("Click OK to include numbers")
     var includeSpecials = prompt("Click OK to include special characters")
 
-    return();
+    return[amount, includeLowercase, includeUppercase, includeNumbers, includeSpecials];
 }
 
 var choices = userInput()
 
-
-
-
-
-
-
-
 // Using our choices array, create a function that creates an array of the combined character sets based on the user’s choices (hint - conditionals) and generates a resulting random string of characters in the amount chosen by the user
 // The function will return that generated string
 
-// We will be using: Functions, conditionals, for loops, .concat(), return statement
+function password (choices) {
+    var charSet = [];
+    var pass = "";
+
+    if (includeLowercase) {
+        combinedCharset = combinedCharset.concat(includeLowercase)
+    }
+    if (includeUppercase) {
+        combinedCharset = combinedCharset.concat(includeUppercase)
+    }
+    if (includeNumbers) {
+        combinedCharset = combinedCharset.concat(includeNumbers)
+    }
+    if (includeSpecials) {
+        combinedCharset = combinedCharset.concat(includeSpecials)
+    }
+
+    for (var count = 0; count < charSet.length; count++) {
+        var = randomIndex(Math.random)
+    }
+}
+
+
+
