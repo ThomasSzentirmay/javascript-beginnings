@@ -22,26 +22,34 @@ var choices = userInput()
 // The function will return that generated string
 
 function password (choices) {
-    var charSet = [];
+    var combinedChars = [];
     var pass = "";
 
     if (includeLowercase) {
-        combinedCharset = combinedCharset.concat(includeLowercase)
+        combinedChars = combinedChars.concat(choices[1])
     }
     if (includeUppercase) {
-        combinedCharset = combinedCharset.concat(includeUppercase)
+        combinedChars = combinedChars.concat(choices[2])
     }
     if (includeNumbers) {
-        combinedCharset = combinedCharset.concat(includeNumbers)
+        combinedChars = combinedChars.concat(choices[3])
     }
     if (includeSpecials) {
-        combinedCharset = combinedCharset.concat(includeSpecials)
+        combinedChars = combinedChars.concat(choices[4])
     }
 
     for (var count = 0; count < charSet.length; count++) {
-        var = randomIndex(Math.random)
+        var randomIndex = Math.floor(Math.random() * combinedChars.length);
+       
+        password += combinedChars[randomIndex];
     }
+
+    return(password);
 }
+
+var genPassword = password;
+
+console.log(genPassword);
 
 
 
