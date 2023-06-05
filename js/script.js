@@ -33,6 +33,13 @@ var users = [
     }
 ];
 
+
+var jane = users.find(function (userObj) {
+    if (userObj.name === 'Jane') return true;
+})
+
+console.log(jane);
+
 // console.log(users[2].healthcare.medications.types[1].pillSize);
 
 // work your way down the data levels to console log the wanted value
