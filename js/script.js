@@ -1,3 +1,44 @@
+var users = [
+    {
+        name: 'JD',
+        age: 43
+    },
+    {
+        name: 'Jane',
+        age: 35,
+        hobbies: ['tennis', 'hiking']
+    },
+    {
+        name: 'Bob',
+        healthcare: {
+            locations: {
+                pharmacy: '555 Cool St',
+                emergency: '555 Help Dr',
+            },
+            medications: {
+                amount: 50,
+                types: [
+                    {
+                        bloodPressure: 'Amlodapine',
+                        pillSize: '10mg',
+                    },
+                    {
+                        painRelief: 'Tylenol',
+                        pillSize: '500mg',
+                    },
+                ]
+            },
+        },
+        age: 99
+    }
+];
+
+console.log(users[2].healthcare.medications.types[1].pillSize);
+
+
+
+
+
 var oldStudentData = ['Matthew', 'FSF']
 var studentData = {
     name: 'Matthew',
@@ -13,8 +54,8 @@ var studentData = {
     }
 };
 
-studentData.someFunc();
-studentData.printInfo();
+// studentData.someFunc();
+// studentData.printInfo();
 
 // var studentName = students[0];
 
