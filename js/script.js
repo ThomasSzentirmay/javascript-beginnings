@@ -10,18 +10,46 @@
 //     console.log('Run this code');
 // }, 1000);
 
-function myFunc (one, two, callBackFunc) {
-    callBackFunc('some callback argument');
-}
-
-myFunc(10, 'some str', function (str) { console.log(str) });
-
-
-
-
-
-// var anotherFunc = function() {
-
+// function myFunc (one, two, callBackFunc) {
+//     callBackFunc('some callback argument');
 // }
 
-// anotherFunc();
+// myFunc(10, 'some str', function (str) { console.log(str) });
+
+
+
+
+// DECLARATION FUNCTION:
+function getProduct(a, b) {
+    return a * b;
+}
+
+getProduct(5, 5);
+
+
+
+function doSomething(whatAmI, blah) {
+    whatAmI('arg passed to callback');
+    console.log(blah);
+}
+
+doSomething(function(youGotThis) {
+    console.log(youGotThis);
+}, 10);
+
+
+
+// EXPRESSION FUNCTION:
+// var another = function () {
+// }
+
+// another();
+
+
+// METHOD FUNCTION:
+// var person = {
+//     haveBirthday: function() {
+//     }
+// }
+
+// person.haveBirthday();
