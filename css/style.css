@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+  }
+  
+  @keyframes colorExplosion {
+    from {
+      background-color: #F8D7DA;
+    }
+    to {
+      background-color: hotpink;
+    }
+  }
+  
+  body.explosion {
+    animation: colorExplosion 3s infinite alternate;
+  }
