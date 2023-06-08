@@ -1,16 +1,37 @@
-html, body {
-    height: 100%;
-  }
-  
-  @keyframes colorExplosion {
-    from {
-      background-color: #F8D7DA;
-    }
-    to {
-      background-color: hotpink;
-    }
-  }
-  
-  body.explosion {
-    animation: colorExplosion 3s infinite alternate;
-  }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding: 10%;
+}
+
+form {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  background-color: #00ffff;
+  padding: 100px 30px;
+  border-radius: 25px;
+}
+
+form h3 {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+form input, form button {
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+form button {
+  border: none;
+  padding: 7px 10px;
+  background-color: #20b2aa;
+  color: #fff;
+  cursor: pointer;
+}

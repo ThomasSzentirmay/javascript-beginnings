@@ -1,55 +1,31 @@
-// var link = document.querySelector('#link');
-// var div = document.querySelector('div');
+var formEl = document.querySelector('#user-form');
+var emailInput = document.querySelector('#email-input');
+var passwordInput = document.querySelector('#pass-input');
 
-// function triggered (eventObj) {
-//     if (eventObj.target.tagName === 'BUTTON') {
-//         eventObj.target.innerText = 'Clicked';
-//     }
-// };
+function getUserInput(eventObj) {
+    eventObj.preventDefault();
 
-// div.addEventListener('click', triggered);
+    var email = emailInput.value;
+    var password = passwordInput.value;
 
-
-
-// function stopTheDefault(eventObj) {
-//     eventObj.preventDefault();
-
-
-//     eventObj.target.innerText = 'Something Else'
-// };
-
-// link.addEventListener('click', stopTheDefault);
-
-
-
-
-
-// Target all the li's in the ul and add an event listener to each li that console logs the innerText of the li
-
-// var liArray = document.querySelectorAll('li');
-
-// function clicked(clicked) {
-//     console.log('clicked');
-// }
-
-// for (var i = 0; i < liArray.length; i++) {
-//     liArray[i].addEventListener('click', clicked)
-// };
-
-// Target the ul and add an event listener that console logs the innerText of the li that was clicked
-
-
-var ul = document.querySelector('ul');
-
-function liListener(e) {
-
-    var el = e.target;
-    var ignore = el.classList.contains('not-me');
-
-    if (!ignore) {
-    console.log(el.innerText);
-    };
-
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
 };
 
-ul.addEventListener('click', liListener)
+formEl.addEventListener('submit', getUserInput);
+
+
+
+
+
+
+// var input = document.querySelector('#name-input');
+
+// function getUserInput(eventObj) {
+//     // eventObj.preventDefault();
+//     if (eventObj.keyCode === 13) {
+//         console.log('enter pressed');
+//     };
+// }
+
+// input.addEventListener('keydown', getUserInput);
