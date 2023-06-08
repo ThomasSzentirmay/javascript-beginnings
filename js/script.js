@@ -1,58 +1,22 @@
-var formEl = document.querySelector('#user-form');
-var emailInput = document.querySelector('#email-input');
-var passwordInput = document.querySelector('#pass-input');
-var emailOutput = document.querySelector('#user-email');
-var passOutput = document.querySelector('#user-pass');
+// Create a function that increases clicks each time the button is pressed and outputs the click amount to the window
 
-// Retrieve user data from localStorage
-function getUserData () {
-    var data = {};
-    
-    data.email = localStorage.getItem('email');
-    data.password = localStorage.getItem('password');
+var clickOutput = document.querySelector('#click-output');
+var clickBtn = document.querySelector('#click-btn');
+var input = document.querySelector('#name-input');
+var clicks = 0;
 
-    return data;
+function addClick() {
+    // increase clicks by one
+    clicks++;
+    // output count to h1
+    clickOutput.innerText = 'Clicks: ' + clicks;
 };
 
-
-// Outputs the user information to the window
-function showUserData () {
-    var userData = getUserData();
-    
-    emailOutput.innerText = `Email: ${userData.email}`;
-    passOutput.innerText = `Password: ${userData.password}`;
-
+function saveUserClicks(eventObj) {
+    if (eventObj.keyCode === 13) {
+        localStorage.setItem();
+    };
 };
 
-
-function getUserInput(eventObj) {
-    eventObj.preventDefault();
-
-    var email = emailInput.value;
-    var password = passwordInput.value;
-
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', password);
-
-    showUserData();
-};
-
-// Initial process or app start tasks
-formEl.addEventListener('submit', getUserInput);
-showUserData();
-
-
-
-
-
-
-// var input = document.querySelector('#name-input');
-
-// function getUserInput(eventObj) {
-//     // eventObj.preventDefault();
-//     if (eventObj.keyCode === 13) {
-//         console.log('enter pressed');
-//     };
-// }
-
-// input.addEventListener('keydown', getUserInput);
+clickBtn.addEventListener('click', addClick);
+input.addEventListener('keydown', saveUserClicks);
